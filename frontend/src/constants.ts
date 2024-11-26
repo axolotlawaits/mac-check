@@ -1,0 +1,1 @@
+export const API = process.env.NODE_ENV === 'production' ? `http://10.11.145.85:5000` : 'http://10.11.145.85:5000';

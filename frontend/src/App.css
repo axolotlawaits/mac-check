@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 50px 15%;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.main-heading {
+  font-size: 20px;
+}
