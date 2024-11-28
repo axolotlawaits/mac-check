@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  backend:
+    build: ./backend
+    image: axolotlawaits/mac-check:backend
+  frontend:
+    build: ./frontend
+    image: axolotlawaits/mac-check:frontend

@@ -9,6 +9,7 @@
   width: 100vw;
   min-height: 100vh;
   margin: 0 auto;
+  background-color: #fafaf9;
 }
 
 #page-wrapper {
@@ -25,4 +26,24 @@
 
 .main-heading {
   font-size: 20px;
+}
+
+.th {
+  padding: 0;
+  background-color: #fafaf9;;
+  transition: background-color 0.3s ease-out;
+}
+
+.th:hover {
+  background-color: #dbeafe;
+}
+
+.control {
+  width: 100%;
+}
+
+.icon {
+  width: 21px;
+  height: 21px;
+  border-radius: 21px;
 }

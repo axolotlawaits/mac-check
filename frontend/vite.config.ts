@@ -7,4 +7,8 @@ export default defineConfig({
   server: {
     host: true
   },
+  preview: {
+    port: 4175
+  },
+  base: '/mac-check/'
 })
