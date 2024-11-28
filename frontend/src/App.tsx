@@ -3,7 +3,8 @@ import './App.css'
 import { Input, Button, Table, Center, Group, UnstyledButton, Text, Notification } from '@mantine/core'
 import { API } from './constants'
 import { IconChevronDown, IconChevronUp, IconSearch, IconSelector } from '@tabler/icons-react';
-import moment from 'moment'
+import { format } from 'date-fns'
+import { ru } from 'date-fns/locale'
 
 type RawData = {
   mac: string
@@ -50,7 +51,7 @@ function App() {
       <Table.Td>{result.mac}</Table.Td>
       <Table.Td>{result.ip}</Table.Td>
       <Table.Td>{result.port}</Table.Td>
-      <Table.Td>{moment(result.lastseen).format('LLL')}</Table.Td>
+      <Table.Td>{format(new Date(result.lastseen), "PPpp", { locale: ru })}</Table.Td>
     </Table.Tr>
   ));
 
