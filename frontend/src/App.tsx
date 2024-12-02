@@ -3,7 +3,7 @@ import './App.css'
 import { Input, Button, Table, Center, Group, UnstyledButton, Text, Notification } from '@mantine/core'
 import { API } from './constants'
 import { IconChevronDown, IconChevronUp, IconSearch, IconSelector } from '@tabler/icons-react';
-import { format } from 'date-fns'
+import { formatInTimeZone } from 'date-fns-tz'
 import { ru } from 'date-fns/locale'
 
 type RawData = {
@@ -51,7 +51,7 @@ function App() {
       <Table.Td>{result.mac}</Table.Td>
       <Table.Td>{result.ip}</Table.Td>
       <Table.Td>{result.port}</Table.Td>
-      <Table.Td>{format(new Date(result.lastseen), "PPpp", { locale: ru })}</Table.Td>
+      <Table.Td>{formatInTimeZone(new Date(result.lastseen), 'Asia/Novosibirsk', "PPpp", { locale: ru })}</Table.Td>
     </Table.Tr>
   ));
 
